@@ -1,44 +1,64 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+import Hero from '../components/Hero';
+
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <section className="section">
-        <div className="container">
-          <div className="content">
-            <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
-          </div>
-          {posts
-            .filter(post => post.node.frontmatter.templateKey === 'blog-post')
-            .map(({ node: post }) => (
-              <div
-                className="content"
-                style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
-                key={post.id}
-              >
-                <p>
-                  <Link className="has-text-primary" to={post.fields.slug}>
-                    {post.frontmatter.title}
-                  </Link>
-                  <span> &bull; </span>
-                  <small>{post.frontmatter.date}</small>
-                </p>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button is-small" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
+      <div>
+        <Hero title="JAMstack development" subtitle="Smell my cheese, you mother!" />
+
+        <section className="section">
+          <div className="container">
+
+            <article class="message is-warning">
+              <div class="message-header">
+                <p>What's wrong with this website?</p>
               </div>
-            ))}
-        </div>
-      </section>
+              <div class="message-body">
+                I'm using this website to experiment with modern development 
+                tools. See the <Link to="/about">about page</Link> for 
+                more details.
+              </div>
+            </article>
+
+            {posts
+              .filter(post => post.node.frontmatter.templateKey === 'Post')
+              .map(({ node: post }) => (
+                <div className="box" key={post.id}>
+                  <div className="content">
+                  
+                    <h3>
+                      <Link className="has-text-primary" to={post.fields.slug}>
+                        {post.frontmatter.title}
+                      </Link>
+                    </h3>
+
+                    <p>
+                      <span class="icon">
+                        <i class="far fa-calendar-alt"></i>
+                      </span>
+                      <small>{post.frontmatter.date}</small>
+                    </p>
+
+                    <p>
+                      {post.excerpt}
+                      <br />
+                      <br />
+                      <Link className="button is-small" to={post.fields.slug}>
+                        Keep Reading →
+                      </Link>
+                    </p>
+                  </div>
+                </div>
+              ))}
+          </div>
+        </section>
+      </div>
     )
   }
 }

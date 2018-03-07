@@ -1,6 +1,7 @@
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
+// Generate pages based on graphQL nodes.
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators
 
@@ -42,6 +43,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   })
 }
 
+// When nodes are created, add the slug field.
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators
 

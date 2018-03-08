@@ -10,3 +10,11 @@ title: About this website
 - Bulma
 - Netlify CMS
 - Netlify CDN
+
+## 
+
+Content
+Templates
+Build
+Deploy
+Host

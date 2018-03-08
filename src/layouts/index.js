@@ -17,7 +17,7 @@ const TemplateWrapper = ({ children }) => (
 
     <Navbar />
 
-    <Hero title="JAMstack development" subtitle="Smell my cheese, you mother!" />
+    <Hero title="JAMstack development" subtitle="Jackanackanory" />
     
     { children() }
 

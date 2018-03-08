@@ -3,27 +3,23 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Navbar from '../components/Navbar'
+import Hero from '../components/Hero';
 import Footer from '../components/Footer'
 import './all.sass'
 
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Home | Gatsby + Netlify CMS"
+      title="Oliver Read"
     >
       <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     </Helmet>
 
     <Navbar />
 
-    {/* <div className="columns">
-      <div className="column is-three-quarters"> */}
-        { children() }
-      {/* </div>
-      <div className="column">
-        Sidebar
-      </div>
-    </div> */}
+    <Hero title="JAMstack development" subtitle="Smell my cheese, you mother!" />
+    
+    { children() }
 
     {/* <Footer /> */}
   </div>

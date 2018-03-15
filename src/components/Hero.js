@@ -1,13 +1,13 @@
 import React from 'react';
 
 const Hero = ({ title, subtitle }) => (
-  <section class="hero is-primary is-bold">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title">
+  <section className="hero is-primary is-bold">
+    <div className="hero-body">
+      <div className="container">
+        <h1 className="title">
           {title}
         </h1>
-        <h2 class="subtitle">
+        <h2 className="subtitle">
           {subtitle}
         </h2>
       </div>

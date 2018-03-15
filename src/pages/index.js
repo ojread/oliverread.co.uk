@@ -10,11 +10,11 @@ export default class IndexPage extends React.Component {
       <section className="section">
         <div className="container">
 
-          <article class="message is-warning">
-            <div class="message-header">
+          <article className="message is-warning">
+            <div className="message-header">
               <p>What's wrong with this website?</p>
             </div>
-            <div class="message-body">
+            <div className="message-body">
               I'm using this website to experiment with modern development 
               tools. See the <Link to="/about">about page</Link> for 
               more details.
@@ -34,8 +34,8 @@ export default class IndexPage extends React.Component {
                   </h3>
 
                   <p>
-                    <span class="icon">
-                      <i class="far fa-calendar-alt"></i>
+                    <span className="icon">
+                      <i className="far fa-calendar-alt"></i>
                     </span>
                     <small>{post.frontmatter.date}</small>
                   </p>

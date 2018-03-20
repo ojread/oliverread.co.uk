@@ -1,8 +1,8 @@
 ---
-templateKey: 'Page'
-path: /about
+templateKey: Page
 title: About this website
 ---
+new words
 
 ## Strategy
 
@@ -11,11 +11,12 @@ Rather than use a traditional monolithic CMS to do everything, break the process
 Follow the [Twelve-factor app methodology](https://en.wikipedia.org/wiki/Twelve-Factor_App_methodology)
 
 ## Technologies in use
-- React
-- Gatsby.js
-- Bulma
-- Netlify CMS
-- Netlify CDN
+
+* React
+* Gatsby.js
+* Bulma
+* Netlify CMS
+* Netlify CDN
 
 ## Services
 
@@ -24,7 +25,6 @@ Follow the [Twelve-factor app methodology](https://en.wikipedia.org/wiki/Twelve-
 Content is currently stored in the repo as Markdown files. These are editable through Netlify CMS.
 
 Another option would be to use a CMS like Cockpit or Drupal and pull in content through their APIs.
-
 
 ### Templates
 

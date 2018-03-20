@@ -2,8 +2,6 @@
 templateKey: Page
 title: About this website
 ---
-new words
-
 ## Strategy
 
 Rather than use a traditional monolithic CMS to do everything, break the process down into individual services that talk to each other.
